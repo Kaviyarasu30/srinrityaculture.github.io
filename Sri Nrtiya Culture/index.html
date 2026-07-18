@@ -372,6 +372,7 @@
     .class-grid, .branch-grid, .field-row{grid-template-columns:1fr;}
     .train-grid{grid-template-columns:1fr 1fr;}
     .footer-grid{grid-template-columns:1fr;}
+    .hero-doodle{position: relative; width: 78%; max-width: 430px; height: auto; z-index: 2; display: block;}
   }
   @media (prefers-reduced-motion: reduce){
     *{animation:none !important; transition:none !important;}
@@ -420,6 +421,7 @@
       </div>
       <div class="hero-meta">
         <div><strong>2019</strong>Academy established</div>
+        <div><strong>80+</strong>Successful Students</div>
         <div><strong>2</strong>Branches in Madurai</div>
         <div><strong>2</strong>Learning modes — Online &amp; Offline</div>
       </div>
@@ -430,24 +432,10 @@
       <span class="bell" style="top:8%; left:12%; animation-delay:0s;"></span>
       <span class="bell" style="top:70%; left:8%; animation-delay:1.2s;"></span>
       <span class="bell" style="top:20%; left:85%; animation-delay:2s;"></span>
-      <svg id="dancer" viewBox="0 0 200 240" fill="none">
-        <!-- stylised bharathanatyam pose: bent knee (aramandi), raised mudra hand -->
-        <path d="M100 30c8 0 14 6 14 14s-6 14-14 14-14-6-14-14 6-14 14-14Z"/>
-        <path d="M100 58v46"/>
-        <path d="M100 60c-22-6-30-30-24-46"/>
-        <path d="M76 14c-4 2-7 6-8 11"/>
-        <path d="M100 60c24 4 34 26 30 44"/>
-        <path d="M130 104c4 3 9 4 14 3"/>
-        <path d="M100 104c-14 10-18 30-12 52-10 14-14 34-8 56"/>
-        <path d="M100 104c16 8 22 26 18 48 12 12 18 30 14 54"/>
-        <path d="M80 212c-6 4-10 10-11 17"/>
-        <path d="M132 210c7 3 12 9 14 16"/>
-        <circle class="fill-gold" cx="100" cy="44" r="3.4"/>
-        <circle class="fill-gold" cx="52" cy="12" r="2.6"/>
-        <circle class="fill-gold" cx="146" cy="106" r="2.6"/>
-        <circle class="fill-gold" cx="69" cy="229" r="2.4"/>
-        <circle class="fill-gold" cx="146" cy="227" r="2.4"/>
-      </svg>
+      <img
+        src="images/bharathanatyam-hero.png"
+        alt="Bharathanatyam Dancer"
+        class="hero-doodle">
     </div>
   </div>
 </section>
