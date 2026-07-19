@@ -260,6 +260,26 @@
   .trainer-copy .role{color:var(--teal); font-weight:600; font-size:0.92rem; margin-bottom:6px;}
   .trainer-copy p{color:var(--ink-soft);}
 
+  .research-card{
+    margin-top:22px; display:flex; gap:16px; align-items:flex-start;
+    background:var(--sand); border:1px solid rgba(122,19,50,0.16); border-radius:6px;
+    padding:20px 22px;
+  }
+  .research-icon{
+    width:40px; height:40px; border-radius:50%; background:var(--ivory); flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; border:1px solid rgba(122,19,50,0.18);
+  }
+  .research-label{
+    display:inline-block; font-size:0.68rem; font-weight:700; letter-spacing:0.1em;
+    text-transform:uppercase; color:var(--maroon); margin-bottom:6px;
+  }
+  .research-card h4{
+    font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:1.02rem;
+    color:var(--maroon-dark); line-height:1.35; margin-bottom:8px;
+  }
+  .research-card p{font-size:0.85rem; color:var(--ink-soft); line-height:1.55;}
+  .research-card p strong{color:var(--maroon-dark);}
+
   /* ===== Branches ===== */
   .branches{background:var(--sand);}
   .branch-grid{display:grid; grid-template-columns:1fr 1fr; gap:28px;}
@@ -373,6 +393,11 @@
     .train-grid{grid-template-columns:1fr 1fr;}
     .footer-grid{grid-template-columns:1fr;}
     .hero-doodle{position: relative; width: 78%; max-width: 430px; height: auto; z-index: 2; display: block;}
+    .research-card{
+    flex-direction:column;
+    padding:20px; }
+    .research-icon{
+    margin-bottom:10px; }
   }
   @media (prefers-reduced-motion: reduce){
     *{animation:none !important; transition:none !important;}
@@ -576,6 +601,16 @@
         <span>BSc</span><span>MA</span><span>PhD</span><span>Bharathanatyam</span>
       </div>
       <p>Mrs. Keerthana founded Sri Nritya Culture in 2019 to make disciplined, traditional Bharathanatyam training accessible to every student willing to learn — whether they walk into the Madurai studio or log in from anywhere in the world. Her teaching blends classical rigour with the patience needed for a young beginner's very first class, guiding students all the way through Nattuvangam, Abhinaya and grade-exam preparation.</p>
+      <div class="research-card">
+        <div class="research-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 5c3-1.5 6-1.5 8 0v14c-2-1.5-5-1.5-8 0V5Z" stroke="#7A1332" stroke-width="1.5" stroke-linejoin="round"/><path d="M20 5c-3-1.5-6-1.5-8 0v14c2-1.5 5-1.5 8 0V5Z" stroke="#7A1332" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <span class="research-label">Published Researcher</span>
+          <h4>"Cinematic Representation of Indian Art and Culture through Bharatanatyam"</h4>
+          <p>A peer-reviewed research paper by <strong>A. Keerthana</strong> (PhD Scholar, VELS University; Founder &amp; Director, Sri Nritya Culture), published in <em>Trimshat — The International Journal on Indian Art and Culture</em>, by the Vanamala Center for Art and Culture Trust, Bengaluru (June 2026, ISBN 978-81-943290-8-4).</p>
+        </div>
+      </div>
       <div class="hero-ctas" style="margin-top:22px;">
         <a href="#contact" class="btn btn-primary">Enquire About Classes</a>
       </div>
