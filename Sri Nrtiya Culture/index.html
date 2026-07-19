@@ -8,7 +8,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <style>
   :root{
     --ivory:#FBF5E8;
@@ -102,7 +101,6 @@
     cursor:pointer; border:1.5px solid transparent; transition:all .25s ease;
   }
   .btn-primary{background:var(--maroon); color:var(--ivory);}
-  .trial-btn {color: #ffffff !important;}
   .btn-primary:hover{background:var(--maroon-dark); transform:translateY(-1px);}
   .btn-gold{background:var(--gold); color:var(--maroon-deep);}
   .btn-gold:hover{background:var(--gold-light);}
@@ -324,23 +322,9 @@
     justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:0.78rem;
   }
   .social-row{display:flex; gap:12px;}
-  .social-row a{width:34px; height:34px; border:1px solid rgba(251,245,232,0.2); border-radius:50%; display:flex; align-items:center; justify-content:center;transition: 0.3s ease}
-  .social-row a:hover{background:rgba(251,245,232,0.1);transform: scale(1.15)}
-  .social-row i {
-    font-size: 18px;
-    color: #E8CD8A;
-    transition: all 0.3s ease;
-}
+  .social-row a{width:34px; height:34px; border:1px solid rgba(251,245,232,0.2); border-radius:50%; display:flex; align-items:center; justify-content:center;}
+  .social-row a:hover{background:rgba(251,245,232,0.1);}
 
-.social-row .fa-instagram:hover {
-    color: #E1306C;
-    transform: scale(1.15);
-}
-
-.social-row .fa-whatsapp:hover {
-    color: #25D366;
-    transform: scale(1.15);
-}
   /* ===== Scroll reveal ===== */
   .reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
   .reveal.is-visible{opacity:1; transform:translateY(0);}
@@ -353,7 +337,7 @@
     transition:transform .2s ease;
   }
   .float-wa:hover{ transform:scale(1.08); }
-  .float-wa i{font-size:30px; color:#fff; }
+
   /* ===== Responsive ===== */
   @media (max-width:900px){
     nav.links, .hero-ctas .btn-outline-light + .btn-outline-light{display:none;}
@@ -372,7 +356,6 @@
     .class-grid, .branch-grid, .field-row{grid-template-columns:1fr;}
     .train-grid{grid-template-columns:1fr 1fr;}
     .footer-grid{grid-template-columns:1fr;}
-    .hero-doodle{position: relative; width: 78%; max-width: 430px; height: auto; z-index: 2; display: block;}
   }
   @media (prefers-reduced-motion: reduce){
     *{animation:none !important; transition:none !important;}
@@ -400,7 +383,7 @@
       <a href="#curriculum">Curriculum</a>
       <a href="#trainer">Trainer</a>
       <a href="#branches">Branches</a>
-      <a href="#contact" class="btn btn-primary trial-btn">Book Free Trial</a>
+      <a href="#contact" class="btn btn-primary">Book Free Trial</a>
     </nav>
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -421,7 +404,6 @@
       </div>
       <div class="hero-meta">
         <div><strong>2019</strong>Academy established</div>
-        <div><strong>80+</strong>Successful Students</div>
         <div><strong>2</strong>Branches in Madurai</div>
         <div><strong>2</strong>Learning modes — Online &amp; Offline</div>
       </div>
@@ -711,11 +693,11 @@
         <p>Where tradition moves with grace. Bharathanatyam training for every age, online and across Madurai, since 2019.</p>
         <div class="social-row" style="margin-top:18px;">
           <a href="https://instagram.com/sri.nritya.culture" target="_blank" rel="noopener" aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#E8CD8A" stroke-width="1.4"/><circle cx="12" cy="12" r="3.4" stroke="#E8CD8A" stroke-width="1.4"/><circle cx="17.3" cy="6.7" r="0.9" fill="#E8CD8A"/></svg>
           </a>
           <a href="https://wa.me/916379035986" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-</a>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 12a8 8 0 1 1-13.9-5.5" stroke="#E8CD8A" stroke-width="1.4"/><path d="M12 4a8 8 0 0 1 7.3 4.7" stroke="#E8CD8A" stroke-width="1.4"/><path d="M8 15s1 1.5 4 1.5S16 15 16 15" stroke="#E8CD8A" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </a>
         </div>
       </div>
       <div>
@@ -745,14 +727,8 @@
   </div>
 </footer>
 
-<a href="https://wa.me/916379035986?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20classes."
-   target="_blank"
-   rel="noopener"
-   class="float-wa"
-   aria-label="Chat on WhatsApp">
-
-    <i class="fa-brands fa-whatsapp"></i>
-
+<a href="https://wa.me/916379035986?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20classes." target="_blank" rel="noopener" class="float-wa" aria-label="Chat on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M20 12a8 8 0 1 1-13.9-5.5" stroke="#fff" stroke-width="1.6"/><path d="M12 4a8 8 0 0 1 7.3 4.7" stroke="#fff" stroke-width="1.6"/><path d="M8 15s1 1.5 4 1.5 4-1.5 4-1.5" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
 </a>
 
 <script>
