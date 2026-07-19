@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sri Nritya Culture — Bharathanatyam Academy | Madurai</title>
+<meta name="description" content="Sri Nritya Culture is a Bharathanatyam dance academy in Madurai offering online and offline classes for kids and adults, led by Mrs. Keerthana (BSc, MA, PhD). Book a free trial class.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+  :root{
+    --ivory:#FBF5E8;
+    --sand:#F1E3C4;
+    --maroon:#7A1332;
+    --maroon-dark:#4A0D22;
+    --maroon-deep:#360818;
+    --gold:#C89B3C;
+    --gold-light:#E8CD8A;
+    --teal:#0B4F4A;
+    --ink:#2B1B1E;
+    --ink-soft:#5A4448;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ivory);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4,.display{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:var(--maroon-dark);
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .container{max-width:1180px; margin:0 auto; padding:0 24px;}
+  .eyebrow{
+    font-family:'Work Sans', sans-serif;
+    font-weight:600;
+    font-size:0.75rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--teal);
+  }
+  .eyebrow.on-dark{color:var(--gold-light);}
+  ::selection{background:var(--gold-light); color:var(--maroon-deep);}
+
+  /* ===== Scallop / temple-arch divider ===== */
+  .scallop{
+    width:100%;
+    height:26px;
+    display:block;
+  }
+  .scallop-ivory-to-maroon{ fill:var(--ivory); }
+  .scallop-maroon-to-ivory{ fill:var(--maroon-dark); }
+  .scallop-ivory-to-sand{ fill:var(--ivory); }
+
+  /* ===== Header ===== */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(251,245,232,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(122,19,50,0.12);
+    transition:background .3s;
+  }
+  .nav-wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 24px; max-width:1180px; margin:0 auto;
+  }
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.25rem;
+    color:var(--maroon);
+  }
+  .brand .mark{
+    width:34px; height:34px; flex-shrink:0;
+  }
+  .brand small{
+    display:block; font-family:'Work Sans'; font-weight:500; font-size:0.62rem;
+    letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-soft);
+  }
+  nav.links{display:flex; gap:30px; align-items:center;}
+  nav.links a{
+    font-size:0.88rem; font-weight:500; color:var(--ink);
+    position:relative; padding:4px 0;
+  }
+  nav.links a::after{
+    content:''; position:absolute; left:0; bottom:0; width:0; height:2px;
+    background:var(--gold); transition:width .25s ease;
+  }
+  nav.links a:hover::after{width:100%;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:11px 22px; border-radius:3px;
+    font-weight:600; font-size:0.85rem; letter-spacing:0.02em;
+    cursor:pointer; border:1.5px solid transparent; transition:all .25s ease;
+  }
+  .btn-primary{background:var(--maroon); color:var(--ivory);}
+  .trial-btn {color: #ffffff !important;}
+  .btn-primary:hover{background:var(--maroon-dark); transform:translateY(-1px);}
+  .btn-gold{background:var(--gold); color:var(--maroon-deep);}
+  .btn-gold:hover{background:var(--gold-light);}
+  .btn-outline{border-color:var(--maroon); color:var(--maroon);}
+  .btn-outline:hover{background:var(--maroon); color:var(--ivory);}
+  .btn-outline-light{border-color:rgba(251,245,232,0.6); color:var(--ivory);}
+  .btn-outline-light:hover{background:rgba(251,245,232,0.12);}
+  .hamburger{display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none;}
+  .hamburger span{width:24px; height:2px; background:var(--maroon);}
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;
+    padding:150px 24px 90px;
+    background:
+      radial-gradient(ellipse 900px 500px at 85% -10%, rgba(200,155,60,0.16), transparent 60%),
+      var(--ivory);
+    overflow:hidden;
+  }
+  .hero-grid{
+    max-width:1180px; margin:0 auto;
+    display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(2.4rem, 4.6vw, 3.7rem);
+    line-height:1.06;
+    margin:18px 0 22px;
+  }
+  .hero h1 em{ color:var(--maroon); font-style:italic; }
+  .hero p.lede{
+    font-size:1.08rem; color:var(--ink-soft); max-width:480px; margin-bottom:32px;
+  }
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:34px;}
+  .hero-meta{
+    display:flex; gap:28px; flex-wrap:wrap;
+  }
+  .hero-meta div{font-size:0.82rem; color:var(--ink-soft);}
+  .hero-meta strong{display:block; font-family:'Fraunces'; font-size:1.3rem; color:var(--maroon); font-weight:600;}
+
+  .hero-art{
+    position:relative; display:flex; align-items:center; justify-content:center;
+    aspect-ratio:1/1;
+  }
+  .hero-art .ring{
+    position:absolute; inset:0; border-radius:50%;
+    border:1.5px dashed rgba(122,19,50,0.25);
+    animation:spin 60s linear infinite;
+  }
+  .hero-art .ring2{ inset:38px; border-color:rgba(200,155,60,0.4); animation-direction:reverse; animation-duration:80s;}
+  @keyframes spin{ to{ transform:rotate(360deg);} }
+  .hero-art svg#dancer{ position:relative; width:78%; height:78%; }
+  .hero-art svg#dancer path{
+    stroke:var(--maroon);
+    fill:none;
+    stroke-width:2.4;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-dasharray:1400;
+    stroke-dashoffset:1400;
+    animation:draw 2.6s ease forwards .3s;
+  }
+  .hero-art svg#dancer .fill-gold{ fill:var(--gold); stroke:none; animation:fadeIn 1s ease forwards 2.4s; opacity:0;}
+  @keyframes draw{ to{ stroke-dashoffset:0; } }
+  @keyframes fadeIn{ to{ opacity:1; } }
+  .bell{ position:absolute; width:9px; height:9px; border-radius:50%; background:var(--gold); opacity:.7; animation:float 5s ease-in-out infinite; }
+  @keyframes float{ 0%,100%{transform:translateY(0);} 50%{transform:translateY(-14px);} }
+
+  /* ===== Section basics ===== */
+  section{padding:86px 0;}
+  .section-head{max-width:640px; margin-bottom:52px;}
+  .section-head.center{margin-left:auto; margin-right:auto; text-align:center;}
+  .section-head h2{font-size:clamp(1.9rem, 3.2vw, 2.6rem); margin-top:12px;}
+  .section-head p{color:var(--ink-soft); margin-top:14px; font-size:1.02rem;}
+
+  /* ===== About ===== */
+  .about{background:var(--ivory);}
+  .about-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px; align-items:center;}
+  .about-visual{
+    position:relative; background:var(--sand); border-radius:6px; padding:38px;
+    border:1px solid rgba(122,19,50,0.14);
+  }
+  .about-visual .quote-mark{ font-family:'Fraunces'; font-size:5rem; color:var(--gold); line-height:0.5; margin-bottom:18px; display:block;}
+  .about-visual blockquote{ font-family:'Fraunces'; font-style:italic; font-size:1.3rem; color:var(--maroon-dark); line-height:1.45;}
+  .about-visual cite{display:block; margin-top:18px; font-style:normal; font-size:0.82rem; color:var(--ink-soft); font-family:'Work Sans'; font-weight:600;}
+  .about-list{list-style:none; margin-top:26px; display:grid; gap:14px;}
+  .about-list li{display:flex; gap:12px; align-items:flex-start; font-size:0.96rem; color:var(--ink-soft);}
+  .about-list .dot{width:7px; height:7px; border-radius:50%; background:var(--gold); margin-top:8px; flex-shrink:0;}
+
+  /* ===== Classes (online/offline) ===== */
+  .classes{background:var(--maroon-dark); color:var(--ivory); position:relative;}
+  .classes .section-head h2{color:var(--ivory);}
+  .classes .section-head p{color:rgba(251,245,232,0.72);}
+  .class-grid{display:grid; grid-template-columns:1fr 1fr; gap:28px;}
+  .class-card{
+    background:rgba(251,245,232,0.05);
+    border:1px solid rgba(251,245,232,0.16);
+    border-radius:6px;
+    padding:34px 30px;
+    transition:transform .3s ease, background .3s ease;
+  }
+  .class-card:hover{ transform:translateY(-5px); background:rgba(251,245,232,0.09); }
+  .class-card .tag{
+    display:inline-block; padding:5px 12px; border-radius:2px; font-size:0.7rem;
+    letter-spacing:0.12em; font-weight:600; text-transform:uppercase; margin-bottom:18px;
+  }
+  .class-card.online .tag{background:var(--teal); color:var(--ivory);}
+  .class-card.offline .tag{background:var(--gold); color:var(--maroon-deep);}
+  .class-card h3{color:var(--ivory); font-size:1.5rem; margin-bottom:16px;}
+  .class-card ul{list-style:none; display:grid; gap:11px;}
+  .class-card li{display:flex; gap:10px; font-size:0.94rem; color:rgba(251,245,232,0.82);}
+  .class-card li svg{flex-shrink:0; margin-top:3px;}
+
+  /* ===== Train / features ===== */
+  .train-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:2px; background:rgba(122,19,50,0.14); border:1px solid rgba(122,19,50,0.14); border-radius:6px; overflow:hidden;}
+  .train-item{background:var(--ivory); padding:32px 26px;}
+  .train-item .num{font-family:'Fraunces'; font-style:italic; color:var(--gold); font-size:1rem; margin-bottom:14px; display:block;}
+  .train-item h4{font-size:1.08rem; margin-bottom:8px;}
+  .train-item p{font-size:0.87rem; color:var(--ink-soft);}
+
+  /* ===== Certification banner ===== */
+  .cert-banner{
+    background:var(--sand); border:1px solid rgba(122,19,50,0.16); border-radius:6px;
+    padding:44px 40px; display:flex; align-items:center; justify-content:space-between; gap:30px; flex-wrap:wrap;
+  }
+  .cert-banner .left{display:flex; align-items:center; gap:20px;}
+  .cert-banner .badge{
+    width:60px; height:60px; border-radius:50%; background:var(--maroon); color:var(--gold-light);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .cert-banner h3{font-size:1.3rem; margin-bottom:6px;}
+  .cert-banner p{color:var(--ink-soft); font-size:0.92rem;}
+
+  /* ===== Trainer ===== */
+  .trainer{background:var(--ivory);}
+  .trainer-grid{display:grid; grid-template-columns:0.55fr 1fr; gap:56px; align-items:center;}
+  .trainer-photo{
+    position:relative; aspect-ratio:4/5; border-radius:6px; overflow:hidden;
+    background:linear-gradient(150deg, var(--maroon) 0%, var(--maroon-dark) 60%, var(--maroon-deep) 100%);
+    display:flex; align-items:flex-end; padding:26px;
+  }
+  .trainer-photo::before{
+    content:''; position:absolute; inset:0;
+    background-image:radial-gradient(circle at 30% 20%, rgba(232,205,138,0.25), transparent 45%);
+  }
+  .trainer-photo .initials{
+    font-family:'Fraunces'; font-size:5.5rem; color:rgba(251,245,232,0.16); position:absolute; top:14px; right:20px;
+  }
+  .trainer-photo .caption{position:relative; color:var(--gold-light); font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase;}
+  .trainer-cred{ display:flex; gap:10px; flex-wrap:wrap; margin:18px 0 20px;}
+  .trainer-cred span{
+    font-size:0.76rem; font-weight:600; letter-spacing:0.05em; color:var(--maroon);
+    border:1px solid rgba(122,19,50,0.3); padding:5px 11px; border-radius:2px;
+  }
+  .trainer-copy h3{font-size:1.9rem; margin-bottom:4px;}
+  .trainer-copy .role{color:var(--teal); font-weight:600; font-size:0.92rem; margin-bottom:6px;}
+  .trainer-copy p{color:var(--ink-soft);}
+
+  /* ===== Branches ===== */
+  .branches{background:var(--sand);}
+  .branch-grid{display:grid; grid-template-columns:1fr 1fr; gap:28px;}
+  .branch-card{
+    background:var(--ivory); border:1px solid rgba(122,19,50,0.14); border-radius:6px; overflow:hidden;
+  }
+  .branch-card iframe{width:100%; height:220px; border:0; display:block; filter:saturate(0.85);}
+  .branch-body{padding:26px 28px;}
+  .branch-body .eyebrow{margin-bottom:8px;}
+  .branch-body h3{font-size:1.25rem; margin-bottom:12px;}
+  .branch-body address{font-style:normal; color:var(--ink-soft); font-size:0.92rem; margin-bottom:16px; line-height:1.6;}
+  .branch-actions{display:flex; gap:10px; flex-wrap:wrap;}
+
+  /* ===== Contact / Lead form ===== */
+  .contact{background:var(--maroon-dark); color:var(--ivory);}
+  .contact .section-head h2{color:var(--ivory);}
+  .contact .section-head p{color:rgba(251,245,232,0.72);}
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:50px;}
+  .contact-info{display:flex; flex-direction:column; gap:22px;}
+  .info-row{display:flex; gap:16px; align-items:flex-start;}
+  .info-row .ic{
+    width:42px; height:42px; border-radius:50%; background:rgba(251,245,232,0.08);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    border:1px solid rgba(251,245,232,0.18);
+  }
+  .info-row h4{color:var(--ivory); font-size:0.98rem; font-weight:600; margin-bottom:3px;}
+  .info-row p, .info-row a{color:rgba(251,245,232,0.72); font-size:0.9rem;}
+  .whatsapp-box{
+    margin-top:8px; background:rgba(251,245,232,0.06); border:1px solid rgba(251,245,232,0.16);
+    border-radius:6px; padding:22px; display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+  }
+  .whatsapp-box p{font-size:0.86rem; color:rgba(251,245,232,0.7); flex:1; min-width:180px;}
+
+  form.lead-form{
+    background:var(--ivory); border-radius:6px; padding:32px; color:var(--ink);
+  }
+  .field{margin-bottom:16px;}
+  .field label{display:block; font-size:0.8rem; font-weight:600; color:var(--maroon-dark); margin-bottom:6px;}
+  .field input, .field select, .field textarea{
+    width:100%; padding:11px 13px; border:1.5px solid rgba(122,19,50,0.2); border-radius:4px;
+    font-family:'Work Sans'; font-size:0.92rem; background:var(--ivory); color:var(--ink);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline:none; border-color:var(--maroon);
+  }
+  .field-row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  form.lead-form .btn{width:100%; justify-content:center; margin-top:6px;}
+  .form-note{font-size:0.76rem; color:var(--ink-soft); margin-top:10px; text-align:center;}
+  #formStatus{font-size:0.86rem; margin-top:12px; text-align:center; font-weight:600;}
+
+  /* ===== Footer ===== */
+  footer{background:var(--maroon-deep); color:rgba(251,245,232,0.6); padding:50px 0 26px;}
+  .footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; margin-bottom:36px;}
+  .footer-brand .brand{color:var(--gold-light);}
+  .footer-brand p{margin-top:14px; font-size:0.88rem; max-width:280px;}
+  footer h5{color:var(--ivory); font-size:0.82rem; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:16px;}
+  footer ul{list-style:none; display:grid; gap:10px;}
+  footer ul a{font-size:0.88rem; color:rgba(251,245,232,0.6);}
+  footer ul a:hover{color:var(--gold-light);}
+  .footer-bottom{
+    border-top:1px solid rgba(251,245,232,0.12); padding-top:22px; display:flex;
+    justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:0.78rem;
+  }
+  .social-row{display:flex; gap:12px;}
+  .social-row a{width:34px; height:34px; border:1px solid rgba(251,245,232,0.2); border-radius:50%; display:flex; align-items:center; justify-content:center;transition: 0.3s ease}
+  .social-row a:hover{background:rgba(251,245,232,0.1);transform: scale(1.15)}
+  .social-row i {
+    font-size: 18px;
+    color: #E8CD8A;
+    transition: all 0.3s ease;
+}
+
+.social-row .fa-instagram:hover {
+    color: #E1306C;
+    transform: scale(1.15);
+}
+
+.social-row .fa-whatsapp:hover {
+    color: #25D366;
+    transform: scale(1.15);
+}
+  /* ===== Scroll reveal ===== */
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.is-visible{opacity:1; transform:translateY(0);}
+
+  /* ===== Sticky WhatsApp button ===== */
+  .float-wa{
+    position:fixed; bottom:22px; right:22px; z-index:90;
+    background:#1FA855; color:#fff; width:56px; height:56px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center; box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    transition:transform .2s ease;
+  }
+  .float-wa:hover{ transform:scale(1.08); }
+  .float-wa i{font-size:30px; color:#fff; }
+  /* ===== Responsive ===== */
+  @media (max-width:900px){
+    nav.links, .hero-ctas .btn-outline-light + .btn-outline-light{display:none;}
+    nav.links{
+      position:fixed; top:63px; left:0; right:0; background:var(--ivory);
+      flex-direction:column; align-items:flex-start; padding:20px 24px; gap:18px;
+      border-bottom:1px solid rgba(122,19,50,0.14);
+      transform:translateY(-130%); transition:transform .3s ease;
+    }
+    nav.links.open{transform:translateY(0);}
+    .hamburger{display:flex;}
+    .hero-grid{grid-template-columns:1fr; gap:40px;}
+    .hero-art{max-width:340px; margin:0 auto;}
+    .about-grid, .trainer-grid, .contact-grid{grid-template-columns:1fr;}
+    .trainer-photo{max-width:320px; margin:0 auto;}
+    .class-grid, .branch-grid, .field-row{grid-template-columns:1fr;}
+    .train-grid{grid-template-columns:1fr 1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+    .hero-doodle{position: relative; width: 78%; max-width: 430px; height: auto; z-index: 2; display: block;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header>
+  <div class="nav-wrap">
+    <a href="#home" class="brand">
+      <svg class="mark" viewBox="0 0 40 40" fill="none">
+        <circle cx="20" cy="20" r="19" stroke="#C89B3C" stroke-width="1.5"/>
+        <path d="M20 9c-3 4-3 6 0 9 3-3 3-5 0-9Z" fill="#7A1332"/>
+        <path d="M12 26c3-5 13-5 16 0" stroke="#7A1332" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="14" cy="27" r="1.4" fill="#C89B3C"/>
+        <circle cx="26" cy="27" r="1.4" fill="#C89B3C"/>
+      </svg>
+      <span>Sri Nritya Culture<small>Bharathanatyam Academy</small></span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#classes">Classes</a>
+      <a href="#curriculum">Curriculum</a>
+      <a href="#trainer">Trainer</a>
+      <a href="#branches">Branches</a>
+      <a href="#contact" class="btn btn-primary trial-btn">Book Free Trial</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="home">
+  <div class="hero-grid">
+    <div class="reveal is-visible">
+      <span class="eyebrow">Bharathanatyam · Online &amp; Offline · Est. 2019</span>
+      <h1>Where <em>Tradition</em><br>Moves with Grace</h1>
+      <p class="lede">Sri Nritya Culture trains young dancers and adults in classical Bharathanatyam — from first adavus to stage-ready abhinaya — through disciplined, guru-led training in Madurai and live online across the world.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-gold">Book a Free Trial Class</a>
+        <a href="#trainer" class="btn btn-outline">Meet Our Trainer</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>2019</strong>Academy established</div>
+        <div><strong>80+</strong>Successful Students</div>
+        <div><strong>2</strong>Branches in Madurai</div>
+        <div><strong>2</strong>Learning modes — Online &amp; Offline</div>
+      </div>
+    </div>
+    <div class="hero-art reveal is-visible">
+      <div class="ring"></div>
+      <div class="ring ring2"></div>
+      <span class="bell" style="top:8%; left:12%; animation-delay:0s;"></span>
+      <span class="bell" style="top:70%; left:8%; animation-delay:1.2s;"></span>
+      <span class="bell" style="top:20%; left:85%; animation-delay:2s;"></span>
+      <svg id="dancer" viewBox="0 0 200 240" fill="none">
+        <!-- stylised bharathanatyam pose: bent knee (aramandi), raised mudra hand -->
+        <path d="M100 30c8 0 14 6 14 14s-6 14-14 14-14-6-14-14 6-14 14-14Z"/>
+        <path d="M100 58v46"/>
+        <path d="M100 60c-22-6-30-30-24-46"/>
+        <path d="M76 14c-4 2-7 6-8 11"/>
+        <path d="M100 60c24 4 34 26 30 44"/>
+        <path d="M130 104c4 3 9 4 14 3"/>
+        <path d="M100 104c-14 10-18 30-12 52-10 14-14 34-8 56"/>
+        <path d="M100 104c16 8 22 26 18 48 12 12 18 30 14 54"/>
+        <path d="M80 212c-6 4-10 10-11 17"/>
+        <path d="M132 210c7 3 12 9 14 16"/>
+        <circle class="fill-gold" cx="100" cy="44" r="3.4"/>
+        <circle class="fill-gold" cx="52" cy="12" r="2.6"/>
+        <circle class="fill-gold" cx="146" cy="106" r="2.6"/>
+        <circle class="fill-gold" cx="69" cy="229" r="2.4"/>
+        <circle class="fill-gold" cx="146" cy="227" r="2.4"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<svg class="scallop scallop-ivory-to-maroon" viewBox="0 0 1200 26" preserveAspectRatio="none"><path d="M0,0 h1200 v10 C1150,26 1050,26 1000,10 C950,26 850,26 800,10 C750,26 650,26 600,10 C550,26 450,26 400,10 C350,26 250,26 200,10 C150,26 50,26 0,10 Z"/></svg>
+
+<!-- ===== About ===== -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-visual reveal">
+      <span class="quote-mark">"</span>
+      <blockquote>Aangikam bhuvanam yasya — the true dancer's body becomes the world itself. We teach the form so the feeling can follow.</blockquote>
+      <cite>— The Guru–Shishya tradition we train within</cite>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">About the academy</span>
+      <h2>Classical technique, taught with patience — for every age that wants to begin.</h2>
+      <p style="color:var(--ink-soft); margin-top:16px;">Since 2019, Sri Nritya Culture has trained dancers of all ages in Bharathanatyam — the youngest taking their first adavu, and adults returning to a childhood dream. Classes run both from our Madurai studios and live online, so distance is never the reason a student doesn't begin.</p>
+      <ul class="about-list">
+        <li><span class="dot"></span> Traditional Guru–Shishya method, adapted for today's classroom and screen</li>
+        <li><span class="dot"></span> Structured pathway from beginner adavus to Nattuvangam and Abhinaya</li>
+        <li><span class="dot"></span> Regular assessments and real stage opportunities, not just exams</li>
+        <li><span class="dot"></span> Training aligned to affiliated grade syllabus and internationally recognised certification</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<svg class="scallop scallop-maroon-to-ivory" viewBox="0 0 1200 26" preserveAspectRatio="none"><path d="M0,26 h1200 v-10 C1150,-6 1050,-6 1000,10 C950,-6 850,-6 800,10 C750,-6 650,-6 600,10 C550,-6 450,-6 400,10 C350,-6 250,-6 200,10 C150,-6 50,-6 0,10 Z"/></svg>
+
+<!-- ===== Classes ===== -->
+<section class="classes" id="classes">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow on-dark">How you learn</span>
+      <h2>Two ways to train. One standard.</h2>
+      <p>Whether a student joins from our Madurai studio or a screen across the world, the training is the same rigorous, guru-led Bharathanatyam.</p>
+    </div>
+    <div class="class-grid">
+      <div class="class-card online reveal">
+        <span class="tag">Online</span>
+        <h3>Online Classes</h3>
+        <ul>
+          <li>✦ Learn from anywhere in the world</li>
+          <li>✦ Flexible timings around school and work</li>
+          <li>✦ Live, interactive sessions — not pre-recorded videos</li>
+          <li>✦ Personalised guidance for every student's pace</li>
+        </ul>
+      </div>
+      <div class="class-card offline reveal">
+        <span class="tag">Offline</span>
+        <h3>Offline Classes</h3>
+        <ul>
+          <li>✦ Learn in a traditional studio environment</li>
+          <li>✦ Focused, personal attention in every class</li>
+          <li>✦ Practical training with real stage experience</li>
+          <li>✦ Regular assessments to track progress</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Curriculum / We Train ===== -->
+<section id="curriculum">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">What we train</span>
+      <h2>From the first adavu to the stage.</h2>
+      <p>A structured path for every learner — young beginners finding their footing, and advanced students preparing for grade examinations.</p>
+    </div>
+    <div class="train-grid reveal">
+      <div class="train-item">
+        <span class="num">01</span>
+        <h4>Beginners to Advanced</h4>
+        <p>A clear, paced curriculum that meets each student exactly where they are.</p>
+      </div>
+      <div class="train-item">
+        <span class="num">02</span>
+        <h4>Traditional Training</h4>
+        <p>Rooted in classical technique, taught the way it has been passed down for generations.</p>
+      </div>
+      <div class="train-item">
+        <span class="num">03</span>
+        <h4>Nattuvangam &amp; Abhinaya</h4>
+        <p>Rhythm, percussion syllables and expressive storytelling — the full craft of Bharathanatyam.</p>
+      </div>
+      <div class="train-item">
+        <span class="num">04</span>
+        <h4>Stage Opportunities</h4>
+        <p>Real performance experience, so training turns into confidence in front of an audience.</p>
+      </div>
+    </div>
+
+    <div class="cert-banner reveal" style="margin-top:40px;">
+      <div class="left">
+        <div class="badge">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.6 5.3 5.9.8-4.3 4.1 1 5.8L12 15l-5.2 3 1-5.8L3.5 8.1l5.9-.8L12 2Z" stroke="#E8CD8A" stroke-width="1.4" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <h3>Trained for Grade Examinations &amp; Certifications</h3>
+          <p>Affiliated syllabus · Internationally recognised exams</p>
+        </div>
+      </div>
+      <a href="#contact" class="btn btn-outline">Ask About Grade Exams</a>
+    </div>
+  </div>
+</section>
+
+<svg class="scallop scallop-ivory-to-maroon" viewBox="0 0 1200 26" preserveAspectRatio="none" style="opacity:0;"></svg>
+
+<!-- ===== Trainer ===== -->
+<section class="trainer" id="trainer">
+  <div class="container trainer-grid">
+    <div class="trainer-photo reveal">
+      <span class="initials">K</span>
+      <span class="caption">Founder &amp; Chief Instructor</span>
+    </div>
+    <div class="trainer-copy reveal">
+      <span class="eyebrow">Your child's teacher</span>
+      <h3>Mrs. Keerthana</h3>
+      <div class="role">Bharathanatyam — BSc, MA, PhD</div>
+      <div class="trainer-cred">
+        <span>BSc</span><span>MA</span><span>PhD</span><span>Bharathanatyam</span>
+      </div>
+      <p>Mrs. Keerthana founded Sri Nritya Culture in 2019 to make disciplined, traditional Bharathanatyam training accessible to every student willing to learn — whether they walk into the Madurai studio or log in from anywhere in the world. Her teaching blends classical rigour with the patience needed for a young beginner's very first class, guiding students all the way through Nattuvangam, Abhinaya and grade-exam preparation.</p>
+      <div class="hero-ctas" style="margin-top:22px;">
+        <a href="#contact" class="btn btn-primary">Enquire About Classes</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="scallop scallop-maroon-to-ivory" viewBox="0 0 1200 26" preserveAspectRatio="none" style="transform:rotate(180deg); fill:var(--sand);"></svg>
+
+<!-- ===== Branches ===== -->
+<section class="branches" id="branches">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Visit a studio</span>
+      <h2>Two branches across Madurai.</h2>
+      <p>Both studios run the same offline curriculum, taught in a traditional, focused environment.</p>
+    </div>
+    <div class="branch-grid">
+      <div class="branch-card reveal">
+        <iframe loading="lazy" src="https://www.google.com/maps?q=Sri+Nritya+Culture+Dance+and+Music+academy+3/390/1+Dhanalakshmi+Mahal+Vadivel+Nagar+Nagamalaipudukottai+Madurai+625019&output=embed"></iframe>
+        <div class="branch-body">
+          <span class="eyebrow">Branch 01</span>
+          <h3>Nagamalaipudukottai</h3>
+          <address>3/390/1, Dhanalakshmi Mahal (Backside), Vadivel Nagar, Nagamalaipudukottai, Madurai – 625019</address>
+          <div class="branch-actions">
+            <a href="https://maps.app.goo.gl/NRpd5h6PRaoT42a27" target="_blank" rel="noopener" class="btn btn-outline">Get Directions</a>
+            <a href="tel:+916379035986" class="btn btn-primary">Call Studio</a>
+          </div>
+        </div>
+      </div>
+      <div class="branch-card reveal">
+        <iframe loading="lazy" src="https://www.google.com/maps?q=Ponmeni+Jeevana+School,+Santhana+Nagar+1st+Street,+Madurai+625016&output=embed"></iframe>
+        <div class="branch-body">
+          <span class="eyebrow">Branch 02</span>
+          <h3>Santhana Nagar, Ponmeni</h3>
+          <address>No. 11, Iyappan Illam, Santhana Nagar 1st Street, Ponmeni Jeevana School West Gate, Madurai – 625016</address>
+          <div class="branch-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=No.+11+Iyappan+Illam+Santhana+Nagar+1st+Street+Ponmeni+Jeevana+School+West+Gate+Madurai+625016" target="_blank" rel="noopener" class="btn btn-outline">Get Directions</a>
+            <a href="tel:+916379035986" class="btn btn-primary">Call Studio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact / Lead Form ===== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow on-dark">Get in touch</span>
+      <h2>Book a free trial class.</h2>
+      <p>Tell us a little about your child (or yourself!) and preferred mode of learning — we'll call you back to schedule a free trial.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="info-row">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.4 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z" stroke="#E8CD8A" stroke-width="1.5"/></svg></div>
+          <div><h4>Call or WhatsApp</h4><a href="tel:+916379035986">+91 63790 35986</a></div>
+        </div>
+        <div class="info-row">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" stroke="#E8CD8A" stroke-width="1.5"/><path d="M3.5 6.5 12 13l8.5-6.5" stroke="#E8CD8A" stroke-width="1.5"/></svg></div>
+          <div><h4>Email</h4><a href="mailto:srinrityaculture@gmail.com">srinrityaculture@gmail.com</a></div>
+        </div>
+        <div class="info-row">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z" stroke="#E8CD8A" stroke-width="1.5"/><circle cx="12" cy="9.5" r="2.3" stroke="#E8CD8A" stroke-width="1.5"/></svg></div>
+          <div><h4>Studios</h4><p>Nagamalaipudukottai &amp; Ponmeni, Madurai</p></div>
+        </div>
+        <div class="info-row">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="4" stroke="#E8CD8A" stroke-width="1.5"/><circle cx="12" cy="12" r="3.5" stroke="#E8CD8A" stroke-width="1.5"/><circle cx="17.2" cy="6.8" r="1" fill="#E8CD8A"/></svg></div>
+          <div><h4>Instagram</h4><a href="https://instagram.com/sri.nritya.culture" target="_blank" rel="noopener">@sri.nritya.culture</a></div>
+        </div>
+
+        <div class="whatsapp-box">
+          <p>Prefer to chat? Message us directly on WhatsApp and we'll reply with trial class timings.</p>
+          <a href="https://wa.me/916379035986?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Bharathanatyam%20classes%20at%20Sri%20Nritya%20Culture." target="_blank" rel="noopener" class="btn btn-gold">Chat on WhatsApp</a>
+        </div>
+      </div>
+
+      <form class="lead-form reveal" id="leadForm">
+        <div class="field">
+          <label for="parentName">Your Name</label>
+          <input type="text" id="parentName" name="parentName" required placeholder="e.g. Priya Raman">
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="phone">Phone / WhatsApp</label>
+            <input type="tel" id="phone" name="phone" required placeholder="10-digit number">
+          </div>
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+          </div>
+        </div>
+        <div class="field">
+          <label for="studentAge">Student's Age (optional)</label>
+          <input type="text" id="studentAge" name="studentAge" placeholder="e.g. 7 years">
+        </div>
+        <div class="field">
+          <label for="mode">Preferred Mode</label>
+          <select id="mode" name="mode">
+            <option>Online Classes</option>
+            <option>Offline — Nagamalaipudukottai Branch</option>
+            <option>Offline — Ponmeni / Santhana Nagar Branch</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message (optional)</label>
+          <textarea id="message" name="message" rows="3" placeholder="Tell us a bit about your goals..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold" id="submitBtn">Request a Free Trial Class</button>
+        <p class="form-note">We'll call or WhatsApp you within 24 hours to schedule your trial. By submitting, you agree to be contacted about classes and updates.</p>
+        <p id="formStatus"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand">
+          <svg class="mark" viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="19" stroke="#C89B3C" stroke-width="1.5"/>
+            <path d="M20 9c-3 4-3 6 0 9 3-3 3-5 0-9Z" fill="#E8CD8A"/>
+            <path d="M12 26c3-5 13-5 16 0" stroke="#E8CD8A" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <span>Sri Nritya Culture</span>
+        </a>
+        <p>Where tradition moves with grace. Bharathanatyam training for every age, online and across Madurai, since 2019.</p>
+        <div class="social-row" style="margin-top:18px;">
+          <a href="https://instagram.com/sri.nritya.culture" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/916379035986" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+        </div>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#classes">Classes</a></li>
+          <li><a href="#curriculum">Curriculum</a></li>
+          <li><a href="#trainer">Trainer</a></li>
+          <li><a href="#branches">Branches</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+916379035986">+91 63790 35986</a></li>
+          <li><a href="mailto:srinrityaculture@gmail.com">srinrityaculture@gmail.com</a></li>
+          <li><a href="#branches">Nagamalaipudukottai, Madurai</a></li>
+          <li><a href="#branches">Ponmeni, Madurai</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Sri Nritya Culture. All rights reserved.</span>
+      <span>Bharathanatyam Academy · Est. 2019 · Madurai, Tamil Nadu</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/916379035986?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20classes."
+   target="_blank"
+   rel="noopener"
+   class="float-wa"
+   aria-label="Chat on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile nav
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+
+  // ============================================================
+  // LEAD CAPTURE: saves every submission to a Google Sheet, then
+  // opens a pre-filled WhatsApp message as instant confirmation.
+  //
+  // SETUP (one-time, ~5 minutes) — see the deployment notes given
+  // alongside this file for full step-by-step instructions:
+  // 1. Create a Google Sheet with header row:
+  //    Timestamp | Name | Phone | Email | Student Age | Preferred Mode | Message
+  // 2. Extensions > Apps Script, paste the provided script, Deploy > Web app
+  //    (Execute as: Me, Who has access: Anyone)
+  // 3. Paste the resulting /exec URL below into GOOGLE_SCRIPT_URL
+  // ============================================================
+  const GOOGLE_SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbzLEIKo4fXy0HjpZ6f_iLMdA5qYAdSF8rmK4spasTgKyZ1s9I7GEEiN3pcAR6BJQxjCOw/exec";
+
+  const form = document.getElementById('leadForm');
+  const status = document.getElementById('formStatus');
+  const submitBtn = document.getElementById('submitBtn');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const name = document.getElementById('parentName').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const age = document.getElementById('studentAge').value.trim();
+    const mode = document.getElementById('mode').value;
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !phone || !email) {
+      status.style.color = '#E8CD8A';
+      status.textContent = 'Please fill in your name, phone and email.';
+      return;
+    }
+
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    const payload = { name, phone, email, age, mode, message, timestamp: new Date().toISOString() };
+
+    const saveToSheet = (GOOGLE_SCRIPT_URL.startsWith('http'))
+      ? fetch(GOOGLE_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors', // Apps Script doesn't return CORS headers; response is opaque but the write still succeeds
+          headers: { 'Content-Type': 'text/plain' },
+          body: JSON.stringify(payload)
+        })
+      : Promise.resolve(); // no sheet configured yet — skip silently
+
+    saveToSheet.finally(() => {
+      const text = `Hi, I'd like to enquire about Bharathanatyam classes.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AEmail: ${encodeURIComponent(email)}%0AStudent age: ${encodeURIComponent(age || '-')}%0APreferred mode: ${encodeURIComponent(mode)}%0AMessage: ${encodeURIComponent(message || '-')}`;
+      window.open(`https://wa.me/916379035986?text=${text}`, '_blank');
+      status.style.color = '#9BE3B0';
+      status.textContent = 'Thank you! Your details have been received — opening WhatsApp to confirm.';
+      submitBtn.textContent = 'Request a Free Trial Class';
+      submitBtn.disabled = false;
+      form.reset();
+    });
+  });
+</script>
+</body>
+</html>
