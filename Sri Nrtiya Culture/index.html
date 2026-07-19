@@ -353,7 +353,7 @@
     transition:transform .2s ease;
   }
   .float-wa:hover{ transform:scale(1.08); }
-
+  .float-wa i{font-size:30px; color:#fff; }
   /* ===== Responsive ===== */
   @media (max-width:900px){
     nav.links, .hero-ctas .btn-outline-light + .btn-outline-light{display:none;}
@@ -432,10 +432,24 @@
       <span class="bell" style="top:8%; left:12%; animation-delay:0s;"></span>
       <span class="bell" style="top:70%; left:8%; animation-delay:1.2s;"></span>
       <span class="bell" style="top:20%; left:85%; animation-delay:2s;"></span>
-      <img
-        src="images/bharathanatyam-hero.png"
-        alt="Bharathanatyam Dancer"
-        class="hero-doodle">
+      <svg id="dancer" viewBox="0 0 200 240" fill="none">
+        <!-- stylised bharathanatyam pose: bent knee (aramandi), raised mudra hand -->
+        <path d="M100 30c8 0 14 6 14 14s-6 14-14 14-14-6-14-14 6-14 14-14Z"/>
+        <path d="M100 58v46"/>
+        <path d="M100 60c-22-6-30-30-24-46"/>
+        <path d="M76 14c-4 2-7 6-8 11"/>
+        <path d="M100 60c24 4 34 26 30 44"/>
+        <path d="M130 104c4 3 9 4 14 3"/>
+        <path d="M100 104c-14 10-18 30-12 52-10 14-14 34-8 56"/>
+        <path d="M100 104c16 8 22 26 18 48 12 12 18 30 14 54"/>
+        <path d="M80 212c-6 4-10 10-11 17"/>
+        <path d="M132 210c7 3 12 9 14 16"/>
+        <circle class="fill-gold" cx="100" cy="44" r="3.4"/>
+        <circle class="fill-gold" cx="52" cy="12" r="2.6"/>
+        <circle class="fill-gold" cx="146" cy="106" r="2.6"/>
+        <circle class="fill-gold" cx="69" cy="229" r="2.4"/>
+        <circle class="fill-gold" cx="146" cy="227" r="2.4"/>
+      </svg>
     </div>
   </div>
 </section>
@@ -731,8 +745,14 @@
   </div>
 </footer>
 
-<a href="https://wa.me/916379035986?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20classes." target="_blank" rel="noopener" class="float-wa" aria-label="Chat on WhatsApp">
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M20 12a8 8 0 1 1-13.9-5.5" stroke="#fff" stroke-width="1.6"/><path d="M12 4a8 8 0 0 1 7.3 4.7" stroke="#fff" stroke-width="1.6"/><path d="M8 15s1 1.5 4 1.5 4-1.5 4-1.5" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
+<a href="https://wa.me/916379035986?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20classes."
+   target="_blank"
+   rel="noopener"
+   class="float-wa"
+   aria-label="Chat on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
 </a>
 
 <script>
