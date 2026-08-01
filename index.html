@@ -278,6 +278,44 @@
   .research-card p strong{color:var(--maroon-dark);}
 
   /* ===== Branches ===== */
+  /* ===== Events & Gallery ===== */
+  .event-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:26px;}
+  .event-card{
+    background:var(--ivory); border:1px solid rgba(122,19,50,0.14); border-radius:6px; overflow:hidden;
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .event-card:hover{ transform:translateY(-4px); box-shadow:0 16px 30px -14px rgba(74,13,34,0.28); }
+  .event-media{
+    position:relative; aspect-ratio:4/3; overflow:hidden;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .event-card.placeholder .event-media{
+    background:
+      repeating-linear-gradient(135deg, rgba(122,19,50,0.05) 0 12px, transparent 12px 24px),
+      var(--sand);
+  }
+  .event-media img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .event-placeholder-icon{
+    width:56px; height:56px; border-radius:50%; background:var(--ivory);
+    border:1.5px dashed rgba(122,19,50,0.3);
+    display:flex; align-items:center; justify-content:center; margin-bottom:10px;
+  }
+  .event-media{ flex-direction:column; }
+  .event-tag{
+    font-size:0.7rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase;
+    color:var(--maroon); background:rgba(200,155,60,0.16); padding:4px 10px; border-radius:2px;
+  }
+  .event-body{padding:20px 22px 24px;}
+  .event-date{
+    font-size:0.72rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--teal);
+  }
+  .event-body h3{font-size:1.12rem; margin:6px 0 8px;}
+  .event-body p{font-size:0.88rem; color:var(--ink-soft); line-height:1.55;}
+  .events-footnote{
+    text-align:center; margin-top:36px; font-size:0.9rem; color:var(--ink-soft);
+  }
+  .events-footnote a{color:var(--maroon); font-weight:600; border-bottom:1px solid rgba(122,19,50,0.3);}
+
   .branches{background:var(--sand);}
   .branch-grid{display:grid; grid-template-columns:1fr 1fr; gap:28px;}
   .branch-card{
@@ -386,7 +424,7 @@
     .hero-art{max-width:340px; margin:0 auto;}
     .about-grid, .trainer-grid, .contact-grid{grid-template-columns:1fr;}
     .trainer-photo{max-width:320px; margin:0 auto;}
-    .class-grid, .branch-grid, .field-row{grid-template-columns:1fr;}
+    .class-grid, .branch-grid, .field-row, .event-grid{grid-template-columns:1fr;}
     .train-grid{grid-template-columns:1fr 1fr;}
     .footer-grid{grid-template-columns:1fr;}
     .hero-doodle{position: relative; width: 78%; max-width: 430px; height: auto; z-index: 2; display: block;}
@@ -410,6 +448,7 @@
       <a href="#classes">Classes</a>
       <a href="#curriculum">Curriculum</a>
       <a href="#trainer">Trainer</a>
+      <a href="#events">Events</a>
       <a href="#branches">Branches</a>
       <a href="#contact" class="btn btn-primary trial-btn">Book Free Trial</a>
     </nav>
@@ -589,7 +628,86 @@
   </div>
 </section>
 
-<svg class="scallop scallop-maroon-to-ivory" viewBox="0 0 1200 26" preserveAspectRatio="none" style="transform:rotate(180deg); fill:var(--sand);"></svg>
+<svg class="scallop scallop-maroon-to-ivory" viewBox="0 0 1200 26" preserveAspectRatio="none" style="opacity:0;"></svg>
+
+<!-- ============================================================
+     EVENTS & GALLERY
+     ------------------------------------------------------------
+     Currently showing placeholder cards since no event photos/
+     details exist yet. To add a REAL event later:
+
+     1. Convert your photo to base64 (any online "image to base64"
+        converter works, or ask Claude to do it for you).
+     2. Copy one "event-card" block below (search EVENT-CARD-TEMPLATE)
+        and paste it as a new item inside <div class="event-grid">.
+     3. Replace:
+          - data:image/...;base64,PASTE_BASE64_HERE  -> your photo's base64 string
+          - the date tag, title, and description text
+     4. Delete the "placeholder" class and the camera-icon <div> —
+        they're only shown when there's no photo yet.
+     That's it — no other code changes needed.
+     ============================================================ -->
+<section id="events">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">On stage</span>
+      <h2>Events &amp; Performances</h2>
+      <p>Annual day celebrations, grade-exam showcases, and stage debuts — a growing gallery of moments from the Sri Nritya Culture stage.</p>
+    </div>
+
+    <div class="event-grid">
+
+      <!-- EVENT-CARD-TEMPLATE (placeholder — swap in real photo + details later) -->
+      <div class="event-card placeholder reveal">
+        <div class="event-media">
+          <div class="event-placeholder-icon">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="#C89B3C" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="14" r="3.5" stroke="#C89B3C" stroke-width="1.5"/></svg>
+          </div>
+          <span class="event-tag">Photos coming soon</span>
+        </div>
+        <div class="event-body">
+          <span class="event-date">Event Date</span>
+          <h3>Annual Day Celebration</h3>
+          <p>Details and highlights from our upcoming annual day performance will be added here.</p>
+        </div>
+      </div>
+
+      <div class="event-card placeholder reveal">
+        <div class="event-media">
+          <div class="event-placeholder-icon">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="#C89B3C" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="14" r="3.5" stroke="#C89B3C" stroke-width="1.5"/></svg>
+          </div>
+          <span class="event-tag">Photos coming soon</span>
+        </div>
+        <div class="event-body">
+          <span class="event-date">Event Date</span>
+          <h3>Grade Exam Showcase</h3>
+          <p>Details and highlights from our students' grade examination showcase will be added here.</p>
+        </div>
+      </div>
+
+      <div class="event-card placeholder reveal">
+        <div class="event-media">
+          <div class="event-placeholder-icon">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" stroke="#C89B3C" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="14" r="3.5" stroke="#C89B3C" stroke-width="1.5"/></svg>
+          </div>
+          <span class="event-tag">Photos coming soon</span>
+        </div>
+        <div class="event-body">
+          <span class="event-date">Event Date</span>
+          <h3>Student Stage Debut (Arangetram)</h3>
+          <p>Details and highlights from our students' stage debut performances will be added here.</p>
+        </div>
+      </div>
+      <!-- END EVENT-CARD-TEMPLATE -->
+
+    </div>
+
+    <p class="events-footnote">More events and photos will be added here soon — meanwhile, follow <a href="https://instagram.com/sri.nritya.culture" target="_blank" rel="noopener">@sri.nritya.culture</a> on Instagram for the latest updates.</p>
+  </div>
+</section>
+
+<svg class="scallop scallop-ivory-to-sand" viewBox="0 0 1200 26" preserveAspectRatio="none"><path d="M0,0 h1200 v10 C1150,26 1050,26 1000,10 C950,26 850,26 800,10 C750,26 650,26 600,10 C550,26 450,26 400,10 C350,26 250,26 200,10 C150,26 50,26 0,10 Z"/></svg>
 
 <!-- ===== Branches ===== -->
 <section class="branches" id="branches">
@@ -727,6 +845,7 @@
           <li><a href="#classes">Classes</a></li>
           <li><a href="#curriculum">Curriculum</a></li>
           <li><a href="#trainer">Trainer</a></li>
+          <li><a href="#events">Events</a></li>
           <li><a href="#branches">Branches</a></li>
         </ul>
       </div>
